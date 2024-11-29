@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rizza Mae Castillo - Portfolio</title>
+    <meta name="description" content="Rizza Mae Castillo's IT portfolio showcasing her skills, projects, and seminars attended.">
+    <meta name="keywords" content="Rizza Mae Castillo, IT Portfolio, Business Analytics, Projects, Seminars">
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Light Mode Styles */
         body {
             background-color: #ffffff;
             color: #000000;
+            font-family: Arial, sans-serif;
             transition: background-color 0.3s, color 0.3s;
         }
 
@@ -26,6 +29,7 @@
             border-radius: 5px;
             text-decoration: none;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         .btn:hover {
@@ -62,6 +66,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         .dark-mode-toggle:hover {
@@ -79,10 +84,10 @@
 
     <main>
         <section class="about">
-            <img src="img/Picture1.jpg" alt="Rizza Castillo" class="profile-picture">
+            <img src="img/Picture1.jpg" alt="Rizza Mae Castillo's Profile Picture" class="profile-picture">
             <div class="about-text">
-                <h2>A Bit About Me</h2>
-                <p>As an IT student with a passion for problem-solving and data, I’m on a mission to turn raw information into impactful business insights. My fascination with technology and analytics drives me to explore how data can shape smarter decisions and innovative strategies. With an eye on the future, I’m gearing up to dive into business analytics, where I can blend tech expertise with business intelligence to unlock new growth opportunities. Data isn’t just numbers to me—it’s the key to unlocking the next big thing in business!</p>
+                <h2>About Me</h2>
+                <p>As an IT student with a passion for problem-solving and data, I’m on a mission to turn raw information into impactful business insights...</p>
             </div>
         </section>
 
@@ -94,21 +99,21 @@
 
         <!-- Seminar Section -->
         <section id="seminar" class="seminar">
-            <img src="img/Picture2.png" alt="seminar1" class="picture2">
+            <img src="img/Picture2.png" alt="Gemini Academy Seminar" class="picture2">
             <div class="seminar-text">
-                <h1>SEMINAR</h1>
+                <h1>Seminar</h1>
                 <h2>Gemini Academy</h2>
-                <p>Gemini Academy addresses the growing need for educators to understand and leverage AI in the classroom. By participating in the academy, educators can gain valuable insights into AI's capabilities, limitations, and ethical considerations, empowering them to make informed decisions about integrating AI into their teaching strategies. They will also receive extensive hands-on experience in using AI tools to solve their day-to-day tasks such as curriculum planning, teaching and learning strategies and more.</p>
+                <p>Gemini Academy addresses the growing need for educators to understand and leverage AI in the classroom...</p>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="seminar">
-            <img src="img/Picture4.png" alt="seminar1" class="picture2">
+            <img src="img/Picture4.png" alt="University Library Online Reservation Project" class="picture2">
             <div class="seminar-text">
-                <h1>PROJECT</h1>
+                <h1>Project</h1>
                 <h2>University Library Online Reservation</h2>
-                <p>University Library Online Reservation is a digital system designed to streamline the process of reserving library resources such as books, study rooms, or computer workstations. It allows students, faculty, and staff to browse available materials, check schedules, and make reservations conveniently from their devices. This system enhances library efficiency, reduces manual work, and ensures fair access to resources by managing bookings and availability in real time.</p>
+                <p>University Library Online Reservation is a digital system designed to streamline the process of reserving library resources...</p>
             </div>
         </section>
     </main>
@@ -130,8 +135,9 @@
         const toggleButton = document.getElementById('darkModeToggle');
         const body = document.body;
 
-        // Check localStorage for user preference
-        if (localStorage.getItem('dark-mode') === 'enabled') {
+        // Initialize dark mode based on localStorage
+        const isDarkModeEnabled = localStorage.getItem('dark-mode') === 'enabled';
+        if (isDarkModeEnabled) {
             body.classList.add('dark-mode');
             toggleButton.textContent = 'Light Mode';
         }
