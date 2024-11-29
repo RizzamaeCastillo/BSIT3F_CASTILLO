@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Paragraph</title>
+    <style>
+        #myParagraph {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggleParagraph()">Click Me!</button>
+
+    <p id="myParagraph">This is the paragraph.</p>
+
+    <script>
+        function toggleParagraph() {
+            var paragraph = document.getElementById("myParagraph");
+            if (paragraph.style.display === "block") {
+                paragraph.style.display = "none";
+            } else {
+                paragraph.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
