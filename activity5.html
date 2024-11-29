@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>color and visibility</title>
+</head>
+<body>
+    <h2 id="text">Change My Color!</h2>
+    <button onclick="colortext()">Click Me!</button>
+
+    <script>
+        let colorState = 0;        
+
+        function colortext() {
+            const text = document.getElementById("text");
+
+            if (colorState === 0) {
+                text.style.color = "red";
+                colorState++;
+            } else if (colorState === 1) {
+                text.style.color = "black";
+                colorState++;
+            } else if (colorState === 2) {
+                text.style.color = "green ";
+                colorState++;
+            } else {
+                text.style.color = "blue";
+                colorState = 0; 
+            }
+        }          
+    </script>
+
+</body>
+</html>
